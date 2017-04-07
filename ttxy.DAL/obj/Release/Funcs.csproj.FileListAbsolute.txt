@@ -1,0 +1,10 @@
+C:\ttxy\workspace\net\PetsNote\ttxy.DAL\bin\Release\ttxy.Funcs.dll.config
+C:\ttxy\workspace\net\PetsNote\ttxy.DAL\bin\Release\ttxy.Funcs.dll
+C:\ttxy\workspace\net\PetsNote\ttxy.DAL\bin\Release\ttxy.Funcs.pdb
+C:\ttxy\workspace\net\PetsNote\ttxy.DAL\bin\Release\MySql.Data.dll
+C:\ttxy\workspace\net\PetsNote\ttxy.DAL\bin\Release\ttxy.Model.dll
+C:\ttxy\workspace\net\PetsNote\ttxy.DAL\bin\Release\ttxy.Model.pdb
+C:\ttxy\workspace\net\PetsNote\ttxy.DAL\obj\Release\Funcs.csprojResolveAssemblyReference.cache
+C:\ttxy\workspace\net\PetsNote\ttxy.DAL\obj\Release\ttxy.Funcs.dll
+C:\ttxy\workspace\net\PetsNote\ttxy.DAL\obj\Release\ttxy.Funcs.pdb
+C:\ttxy\workspace\net\PetsNote\ttxy.DAL\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll

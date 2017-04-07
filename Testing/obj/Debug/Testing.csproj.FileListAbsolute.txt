@@ -1,0 +1,11 @@
+C:\ttxy\workspace\net\ADB_P2\Testing\bin\Debug\Testing.exe.config
+C:\ttxy\workspace\net\ADB_P2\Testing\bin\Debug\Testing.exe
+C:\ttxy\workspace\net\ADB_P2\Testing\bin\Debug\Testing.pdb
+C:\ttxy\workspace\net\ADB_P2\Testing\obj\Debug\Testing.csprojResolveAssemblyReference.cache
+C:\ttxy\workspace\net\ADB_P2\Testing\obj\Debug\Testing.exe
+C:\ttxy\workspace\net\ADB_P2\Testing\obj\Debug\Testing.pdb
+C:\ttxy\workspace\net\ADB_P2\Testing\bin\Debug\ttxy.Funcs.dll
+C:\ttxy\workspace\net\ADB_P2\Testing\bin\Debug\ttxy.Model.dll
+C:\ttxy\workspace\net\ADB_P2\Testing\bin\Debug\MySql.Data.dll
+C:\ttxy\workspace\net\ADB_P2\Testing\bin\Debug\ttxy.Funcs.pdb
+C:\ttxy\workspace\net\ADB_P2\Testing\bin\Debug\ttxy.Model.pdb

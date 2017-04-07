@@ -1,0 +1,37 @@
+﻿body {
+    margin:4px;
+	background-color: #ffffff;
+    width: 100%;
+}
+
+#point_map {
+	width: 100%;
+	height: 160px;
+}
+
+#navigation_map {
+	width: 100%;
+	height: 70%;
+}
+
+#fixed_div {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	width: 50px;
+	height: 50px;
+}
+
+.float_btn {
+	filter: alpha(opacity = 50);
+	-moz-opacity: 0.5;
+}
+
+.org-title {
+	height: 24px;
+	background-color: #d9edf7;
+	border-bottom: 1px solid #bce8f1;
+    vertical-align:sub;
+    line-height:24px;
+    padding:inherit;
+}
