@@ -6,4 +6,3 @@ C:\ttxy\workspace\net\ADB_P2\ttxy.Model\bin\Debug\ttxy.Model.dll
 C:\ttxy\workspace\net\ADB_P2\ttxy.Model\bin\Debug\ttxy.Model.pdb
 C:\ttxy\workspace\net\ADB_P2\ttxy.Model\obj\Debug\ttxy.Model.dll
 C:\ttxy\workspace\net\ADB_P2\ttxy.Model\obj\Debug\ttxy.Model.pdb
-C:\ttxy\workspace\net\ADB_P2\ttxy.Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

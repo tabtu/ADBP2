@@ -66,7 +66,7 @@ public partial class Control_U_rank : System.Web.UI.UserControl
         int result = sf.AddAttendance(tmp);
         if (result > 0)
         {
-            Response.Write("<script language='javascript'>alert('Success!!!'); location.href='Manage.aspx'</script>");
+            Response.Write("<script language='javascript'>alert('Success!!!');</script>");
         }
         else
         {
