@@ -7,6 +7,9 @@
         private short _starttime;
         private short _endtime;
 
+        private string _strCourseName;
+        private string _strCourseTime;
+
         public uint Course
         {
             get
@@ -56,6 +59,32 @@
             set
             {
                 _endtime = value;
+            }
+        }
+
+        public string StrCourseName
+        {
+            get
+            {
+                return _strCourseName;
+            }
+
+            set
+            {
+                _strCourseName = value;
+            }
+        }
+
+        public string StrCourseTime
+        {
+            get
+            {
+                return _strCourseTime;
+            }
+
+            set
+            {
+                _strCourseTime = value;
             }
         }
     }

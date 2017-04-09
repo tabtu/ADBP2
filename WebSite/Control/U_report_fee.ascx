@@ -1,21 +1,24 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="U_report_fee.ascx.cs" Inherits="Control_U_report" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
-  <asp:ScriptManager ID="ScriptManager1" runat="server">
-        </asp:ScriptManager>
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <ContentTemplate>
+
+                <strong>Start Date:</strong>
+
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <br />
+<strong>End Date:</strong>
                 <ajaxToolkit:CalendarExtender ID="TextBox1_CalendarExtender" runat="server" BehaviorID="TextBox1_CalendarExtender" TargetControlID="TextBox1" />
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                 <ajaxToolkit:CalendarExtender ID="TextBox2_CalendarExtender" runat="server" BehaviorID="TextBox2_CalendarExtender" TargetControlID="TextBox2" />
         <asp:Button ID="Button_d" runat="server" Text="Date" OnClick="Button_submit_Click" />
                 <br />
                 <br />
+                <strong>Student:</strong>
                 <asp:DropDownList ID="DropDownList_stu" runat="server" AutoPostBack="True">
         </asp:DropDownList>
                 <asp:Button ID="Button_s" runat="server" OnClick="Button_s_Click" Text="Student" />
                 <br />
                 <br />
+        <strong>Fee Type:</strong>
         <asp:DropDownList ID="DropDownList_pf" runat="server" AutoPostBack="True">
         </asp:DropDownList>
                 <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="PayFor" />
@@ -26,7 +29,9 @@
                 <br />
                 <br />
                 <br />
+                <strong>
                 <asp:Label ID="Label_result" runat="server"></asp:Label>
+                </strong>
                 <br />
 
 
@@ -54,11 +59,3 @@
         </table>
     </FooterTemplate>
 </asp:Repeater>
-
-
-                <br />
-                <br />
-
-                
-                </ContentTemplate>
-        </asp:UpdatePanel>

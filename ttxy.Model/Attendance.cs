@@ -8,6 +8,8 @@ namespace ttxy.Model
         private uint _course;
         private DateTime _date;
 
+        private string _strStudent;
+        private string _strCourse;
         public uint Student
         {
             get
@@ -44,6 +46,32 @@ namespace ttxy.Model
             set
             {
                 _date = value;
+            }
+        }
+
+        public string StrStudent
+        {
+            get
+            {
+                return _strStudent;
+            }
+
+            set
+            {
+                _strStudent = value;
+            }
+        }
+
+        public string StrCourse
+        {
+            get
+            {
+                return _strCourse;
+            }
+
+            set
+            {
+                _strCourse = value;
             }
         }
     }

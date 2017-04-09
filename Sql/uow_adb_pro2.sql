@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50712
 File Encoding         : 65001
 
-Date: 2017-04-06 23:40:39
+Date: 2017-04-09 00:08:46
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -52,6 +52,8 @@ INSERT INTO `db_p2_attendance` VALUES ('29', '4', '2016-08-07');
 INSERT INTO `db_p2_attendance` VALUES ('5', '5', '2016-12-30');
 INSERT INTO `db_p2_attendance` VALUES ('10', '5', '2015-03-02');
 INSERT INTO `db_p2_attendance` VALUES ('11', '5', '2016-09-11');
+INSERT INTO `db_p2_attendance` VALUES ('5', '6', '2017-03-31');
+INSERT INTO `db_p2_attendance` VALUES ('5', '6', '2017-04-05');
 INSERT INTO `db_p2_attendance` VALUES ('6', '6', '2016-07-19');
 INSERT INTO `db_p2_attendance` VALUES ('16', '6', '2017-02-10');
 INSERT INTO `db_p2_attendance` VALUES ('9', '7', '2017-03-03');
@@ -187,7 +189,7 @@ CREATE TABLE `db_p2_payment` (
   KEY `PYPI` (`PAF_ID`),
   CONSTRAINT `PYPI` FOREIGN KEY (`PAF_ID`) REFERENCES `db_p2_payfor` (`PAF_ID`),
   CONSTRAINT `PYSN` FOREIGN KEY (`STU_NUM`) REFERENCES `db_p2_student` (`STU_NUM`)
-) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of db_p2_payment
@@ -232,6 +234,7 @@ INSERT INTO `db_p2_payment` VALUES ('37', '29', '789', '2', '2017-04-07 12:00:00
 INSERT INTO `db_p2_payment` VALUES ('38', '27', '665', '1', '2017-04-07 12:33:00');
 INSERT INTO `db_p2_payment` VALUES ('39', '28', '87', '1', '2017-04-07 13:00:00');
 INSERT INTO `db_p2_payment` VALUES ('40', '22', '568', '4', '2017-04-07 13:10:00');
+INSERT INTO `db_p2_payment` VALUES ('85', '3', '656', '3', '2017-04-08 15:12:51');
 
 -- ----------------------------
 -- Table structure for `db_p2_rank`
@@ -355,8 +358,10 @@ CREATE TABLE `db_p2_stupar` (
 -- ----------------------------
 -- Records of db_p2_stupar
 -- ----------------------------
+INSERT INTO `db_p2_stupar` VALUES ('1', '', '', '1');
 INSERT INTO `db_p2_stupar` VALUES ('1', '', '', '1');
 INSERT INTO `db_p2_stupar` VALUES ('2', '', '', '3');
+INSERT INTO `db_p2_stupar` VALUES ('2', '', '', '1');
 
 -- ----------------------------
 -- Table structure for `db_p2_sturank`
@@ -383,6 +388,33 @@ INSERT INTO `db_p2_sturank` VALUES ('2', '4', '2016-09-30');
 INSERT INTO `db_p2_sturank` VALUES ('2', '5', '2016-12-31');
 INSERT INTO `db_p2_sturank` VALUES ('2', '6', '2017-03-21');
 INSERT INTO `db_p2_sturank` VALUES ('3', '1', '2017-02-01');
+INSERT INTO `db_p2_sturank` VALUES ('4', '1', '2016-02-02');
+INSERT INTO `db_p2_sturank` VALUES ('5', '1', '2016-12-30');
+INSERT INTO `db_p2_sturank` VALUES ('6', '1', '2016-07-19');
+INSERT INTO `db_p2_sturank` VALUES ('7', '1', '2017-01-03');
+INSERT INTO `db_p2_sturank` VALUES ('8', '1', '2017-01-19');
+INSERT INTO `db_p2_sturank` VALUES ('9', '1', '2017-03-03');
+INSERT INTO `db_p2_sturank` VALUES ('10', '1', '2015-03-02');
+INSERT INTO `db_p2_sturank` VALUES ('11', '1', '2016-09-11');
+INSERT INTO `db_p2_sturank` VALUES ('12', '1', '2017-01-03');
+INSERT INTO `db_p2_sturank` VALUES ('13', '1', '2017-01-03');
+INSERT INTO `db_p2_sturank` VALUES ('14', '1', '2017-04-03');
+INSERT INTO `db_p2_sturank` VALUES ('15', '1', '2017-02-02');
+INSERT INTO `db_p2_sturank` VALUES ('16', '1', '2017-02-10');
+INSERT INTO `db_p2_sturank` VALUES ('17', '1', '2015-12-23');
+INSERT INTO `db_p2_sturank` VALUES ('18', '1', '2015-10-30');
+INSERT INTO `db_p2_sturank` VALUES ('19', '1', '2016-05-04');
+INSERT INTO `db_p2_sturank` VALUES ('20', '1', '2016-04-05');
+INSERT INTO `db_p2_sturank` VALUES ('21', '1', '2017-04-05');
+INSERT INTO `db_p2_sturank` VALUES ('22', '1', '2017-01-20');
+INSERT INTO `db_p2_sturank` VALUES ('23', '1', '2016-10-28');
+INSERT INTO `db_p2_sturank` VALUES ('24', '1', '2016-09-02');
+INSERT INTO `db_p2_sturank` VALUES ('25', '1', '2016-07-19');
+INSERT INTO `db_p2_sturank` VALUES ('26', '1', '2016-06-16');
+INSERT INTO `db_p2_sturank` VALUES ('27', '1', '2017-03-30');
+INSERT INTO `db_p2_sturank` VALUES ('28', '1', '2015-01-03');
+INSERT INTO `db_p2_sturank` VALUES ('29', '1', '2016-08-07');
+INSERT INTO `db_p2_sturank` VALUES ('30', '1', '2016-07-15');
 
 -- ----------------------------
 -- Table structure for `db_p2_timetable`

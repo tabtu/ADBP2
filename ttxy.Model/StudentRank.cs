@@ -8,6 +8,8 @@ namespace ttxy.Model
         private uint _rank;
         private DateTime _date;
 
+        private string _strRank;
+
         public uint Stnum
         {
             get
@@ -44,6 +46,19 @@ namespace ttxy.Model
             set
             {
                 _date = value;
+            }
+        }
+
+        public string StrRank
+        {
+            get
+            {
+                return _strRank;
+            }
+
+            set
+            {
+                _strRank = value;
             }
         }
     }

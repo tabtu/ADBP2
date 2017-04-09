@@ -14,9 +14,15 @@ namespace Testing
         static void Main(string[] args)
         {
             SqlFuns sf = new SqlFuns();
-            IList<Student> s = sf.SearchStudent(true);
-            IList<PayFor> pf = sf.SearchPayFor();
-            Console.WriteLine(s.Count + "," + pf.Count);
+            IList<Student> st = sf.SearchStudent(true);
+            for (int i = 2; i < st.Count; i++)
+            {
+                StudentRank t = new StudentRank();
+                t.Stnum = st[i].Stnum;
+                t.Rank = 1;
+                t.Date = st[i].Joindate;
+                sf.AddStudentRank(t);
+            }
         }
     }
 }

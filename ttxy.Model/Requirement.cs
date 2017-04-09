@@ -6,6 +6,8 @@
         private uint _course;
         private string _description;
 
+        private string _strCourse;
+
         public uint Rank
         {
             get
@@ -42,6 +44,19 @@
             set
             {
                 _description = value;
+            }
+        }
+
+        public string StrCourse
+        {
+            get
+            {
+                return _strCourse;
+            }
+
+            set
+            {
+                _strCourse = value;
             }
         }
     }

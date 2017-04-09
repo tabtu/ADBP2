@@ -18,47 +18,55 @@ namespace ttxy.Funcs
         /*--------------------------------------attendance------------------------------------------*/
         public int AddAttendance(Attendance ld)
         {
-            string sqlstr = "INSERT INTO db_p2_attendance (STU_NUM, COS_ID, ATD_DT)VALUES('" +
-                ld.Student + "', '" +
-                ld.Course + "', '" +
+            string sqlstr = "INSERT INTO db_p2_attendance (STU_NUM, COS_ID, ATD_DT)VALUES(" +
+                ld.Student + ", " +
+                ld.Course + ", '" +
                 ld.Date.ToShortDateString() + "');";
             int result = MySqlHelper.ExecuteNonQuery(sqlstr);
             return result;
         }
 
-        public Attendance SearchAttendanceSNUM(string snum)
+        public IList<Attendance> SearchAttendanceSNUM(uint snum)
         {
-            string sqlstr = "SELECT STU_NUM, COS_ID, ATD_DT FROM db_p2_attendance WHERE STU_NUM='";
+            string sqlstr = "SELECT STU_NUM, COS_ID, ATD_DT FROM db_p2_attendance WHERE STU_NUM=";
 
-            DataSet ds = MySqlHelper.ExecuteQuery(sqlstr + snum + "'");
+            DataSet ds = MySqlHelper.ExecuteQuery(sqlstr + snum);
             DataTable dt = ds.Tables[0];
+            IList<Attendance> result = new List<Attendance>();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                Attendance temp = new Attendance();
 
-            Attendance temp = new Attendance();
+                temp.Student = uint.Parse(dt.Rows[i][0].ToString());
+                temp.Course = uint.Parse(dt.Rows[i][1].ToString());
+                temp.Date = DateTime.Parse(dt.Rows[i][2].ToString());
 
-            temp.Student = uint.Parse(dt.Rows[0][0].ToString());
-            temp.Course = uint.Parse(dt.Rows[0][1].ToString());
-            temp.Date = DateTime.Parse(dt.Rows[0][2].ToString());
-
-            return temp;
+                result.Add(temp);
+            }
+            return result;
         }
 
-        public Attendance SearchAttendanceCNUM(string cnum)
+        public IList<Attendance> SearchAttendanceCNUM(uint cnum)
         {
-            string sqlstr = "SELECT STU_NUM, COS_ID, ATD_DT FROM db_p2_attendance WHERE COS_ID='";
-
-            DataSet ds = MySqlHelper.ExecuteQuery(sqlstr + cnum + "'");
+            string sqlstr = "SELECT STU_NUM, COS_ID, ATD_DT FROM db_p2_attendance WHERE COS_ID=";
+            DataSet ds = MySqlHelper.ExecuteQuery(sqlstr + cnum);
             DataTable dt = ds.Tables[0];
 
-            Attendance temp = new Attendance();
+            IList<Attendance> result = new List<Attendance>();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                Attendance temp = new Attendance();
 
-            temp.Student = uint.Parse(dt.Rows[0][0].ToString());
-            temp.Course = uint.Parse(dt.Rows[0][1].ToString());
-            temp.Date = DateTime.Parse(dt.Rows[0][2].ToString());
+                temp.Student = uint.Parse(dt.Rows[i][0].ToString());
+                temp.Course = uint.Parse(dt.Rows[i][1].ToString());
+                temp.Date = DateTime.Parse(dt.Rows[i][2].ToString());
 
-            return temp;
+                result.Add(temp);
+            }
+            return result;
         }
 
-        public IList<Attendance> SearchAttendanceCNUM(DateTime sd, DateTime ed)
+        public IList<Attendance> SearchAttendanceDT(DateTime sd, DateTime ed)
         {
             string sqlstr = "SELECT STU_NUM, COS_ID, ATD_DT FROM db_p2_attendance WHERE ATD_DT>'" + sd.ToShortDateString();
             string sqlend = "' and ATD_DT<'" + ed.ToShortDateString() + "';";
@@ -126,7 +134,7 @@ namespace ttxy.Funcs
             temp.Cosid = uint.Parse(dt.Rows[0][0].ToString());
             temp.Name = dt.Rows[0][1].ToString();
             temp.Level = ushort.Parse(dt.Rows[0][2].ToString());
-            temp.Active = dt.Rows[0][3].Equals("1");
+            temp.Active = dt.Rows[0][3].ToString() == "1";
 
             return temp;
         }
@@ -146,7 +154,7 @@ namespace ttxy.Funcs
                 temp.Cosid = uint.Parse(dt.Rows[i][0].ToString());
                 temp.Name = dt.Rows[i][1].ToString();
                 temp.Level = ushort.Parse(dt.Rows[i][2].ToString());
-                temp.Active = dt.Rows[i][3].Equals("1");
+                temp.Active = dt.Rows[i][3].ToString() == "1";
 
                 result.Add(temp);
             }
@@ -168,7 +176,7 @@ namespace ttxy.Funcs
                 temp.Cosid = uint.Parse(dt.Rows[i][0].ToString());
                 temp.Name = dt.Rows[i][1].ToString();
                 temp.Level = ushort.Parse(dt.Rows[i][2].ToString());
-                temp.Active = dt.Rows[i][3].Equals("1");
+                temp.Active = dt.Rows[i][3].ToString() == "1";
 
                 result.Add(temp);
             }
@@ -282,7 +290,7 @@ namespace ttxy.Funcs
 
             temp.Usrname = dt.Rows[0][0].ToString();
             temp.Pwd = dt.Rows[0][1].ToString();
-            temp.Is_stu = dt.Rows[0][2].Equals("1");
+            temp.Is_stu = dt.Rows[0][2].ToString() == "1";
             temp.Stnum = uint.Parse(dt.Rows[0][3].ToString());
 
             return temp;
@@ -617,7 +625,7 @@ namespace ttxy.Funcs
             temp.Mobile = dt.Rows[0][4].ToString();
             temp.Email = dt.Rows[0][5].ToString();
             temp.Address = dt.Rows[0][6].ToString();
-            temp.Active = dt.Rows[0][7].Equals("1");
+            temp.Active = dt.Rows[0][7].ToString() == "1";
 
             return temp;
         }
@@ -642,7 +650,7 @@ namespace ttxy.Funcs
                 temp.Mobile = dt.Rows[i][4].ToString();
                 temp.Email = dt.Rows[i][5].ToString();
                 temp.Address = dt.Rows[i][6].ToString();
-                temp.Active = dt.Rows[i][7].Equals("1");
+                temp.Active = dt.Rows[i][7].ToString() == "1";
 
                 result.Add(temp);
             }
@@ -652,7 +660,8 @@ namespace ttxy.Funcs
         public IList<Student> SearchStudent(bool active)
         {
             string sqlstr = "SELECT STU_NUM, STU_NAME, STU_BIRTH, STU_JODATE, STU_MOBILE, STU_EMAIL, STU_ADDR, STU_ACTIVE FROM db_p2_student WHERE STU_ACTIVE=";
-            DataSet ds = MySqlHelper.ExecuteQuery(sqlstr + active);
+            string sqlend = " ORDER BY STU_NAME";
+            DataSet ds = MySqlHelper.ExecuteQuery(sqlstr + active + sqlend);
             DataTable dt = ds.Tables[0];
 
             IList<Student> result = new List<Student>();
@@ -667,7 +676,7 @@ namespace ttxy.Funcs
                 temp.Mobile = dt.Rows[i][4].ToString();
                 temp.Email = dt.Rows[i][5].ToString();
                 temp.Address = dt.Rows[i][6].ToString();
-                temp.Active = dt.Rows[i][7].Equals("1");
+                temp.Active = dt.Rows[i][7].ToString() == "1";
 
                 result.Add(temp);
             }
@@ -704,7 +713,7 @@ namespace ttxy.Funcs
         public IList<StudentRank> SearchStudentRank(uint snum)
         {
             string sqlstr = "SELECT STU_NUM, RAK_ID, STR_DT FROM db_p2_sturank WHERE STU_NUM=";
-            string sqlend = " ORDER BY RAK_ID";
+            string sqlend = " ORDER BY RAK_ID DESC";
             DataSet ds = MySqlHelper.ExecuteQuery(sqlstr + snum + sqlend);
             DataTable dt = ds.Tables[0];
 
@@ -734,16 +743,12 @@ namespace ttxy.Funcs
             return result;
         }
 
-        public int DropStuParent(uint cosid)
+        public int DropStuParent(uint stnum, bool mord)
         {
-            string sqlstr = "UPDATE db_p2_stupar SET COS_ACTIVE=0 WHERE COS_ID=" + cosid;
-
+            string sqlstr = "DELETE FROM db_p2_stupar " +
+                "WHERE STU_NUM=" + stnum + " AND STP_MORD=" + mord;
             int result = MySqlHelper.ExecuteNonQuery(sqlstr);
             return result;
-            //string sqlstr = "DELETE FROM u_pet " +
-            //    "WHERE id=" + ld.ID;
-            //int result = MySqlHelper.ExecuteNonQuery(sqlstr);
-            //return result;
         }
 
         public StuParent SearchStuParent(uint stnum, bool mod)
@@ -756,8 +761,8 @@ namespace ttxy.Funcs
             StuParent temp = new StuParent();
 
             temp.Stnum = uint.Parse(dt.Rows[0][0].ToString());
-            temp.Mord = dt.Rows[0][1].Equals("1");
-            temp.Stpar = dt.Rows[0][2].Equals("1");
+            temp.Mord = dt.Rows[0][1].ToString() == "1";
+            temp.Stpar = dt.Rows[0][2].ToString() == "1";
             temp.Spnum = uint.Parse(dt.Rows[0][3].ToString());
 
             return temp;
@@ -775,8 +780,8 @@ namespace ttxy.Funcs
                 StuParent temp = new StuParent();
 
                 temp.Stnum = uint.Parse(dt.Rows[i][0].ToString());
-                temp.Mord = dt.Rows[i][1].Equals("1");
-                temp.Stpar = dt.Rows[i][2].Equals("1");
+                temp.Mord = dt.Rows[i][1].ToString() == "1";
+                temp.Stpar = dt.Rows[i][2].ToString() == "1";
                 temp.Spnum = uint.Parse(dt.Rows[i][3].ToString());
 
                 result.Add(temp);

@@ -18,5 +18,11 @@
             <asp:TextBox ID="TextBox_pwd" runat="server" TextMode="Password"></asp:TextBox>
         </td>
     </tr>
+    <tr>
+        <td></td>
+        <td>
+            <asp:Button ID="Button_login" runat="server" OnClick="Button_login_Click" Text="Login" />
+        </td>
+    </tr>
 </table>
 

@@ -52,10 +52,52 @@ namespace ttxy.Funcs
         public IList<Payment> FillPayment(IList<Payment> list)
         {
             SqlFuns sf = new SqlFuns();
-            foreach(Payment tmp in list)
+            foreach (Payment tmp in list)
             {
                 tmp.StrStuName = sf.SearchStudent(tmp.Stnum).Name;
                 tmp.StrPayFor = sf.SearchPayFor(tmp.Payfor).Description;
+            }
+            return list;
+        }
+
+        public IList<Timetable> FillTimetable(IList<Timetable> list)
+        {
+            SqlFuns sf = new SqlFuns();
+            foreach (Timetable tmp in list)
+            {
+                tmp.StrCourseName = sf.SearchCourseID(tmp.Course).Name;
+                tmp.StrCourseTime = tmp.Starttime / 60 + ":" + tmp.Starttime % 60 + " - " + tmp.Endtime / 60 + ":" + tmp.Endtime % 60;
+            }
+            return list;
+        }
+
+        public IList<StudentRank> FillStuRank(IList<StudentRank> list)
+        {
+            SqlFuns sf = new SqlFuns();
+            foreach (StudentRank tmp in list)
+            {
+                tmp.StrRank = sf.SearchRank(tmp.Rank).Name;
+            }
+            return list;
+        }
+
+        public IList<Attendance> FillAttendance(IList<Attendance> list)
+        {
+            SqlFuns sf = new SqlFuns();
+            foreach (Attendance tmp in list)
+            {
+                tmp.StrStudent = sf.SearchStudent(tmp.Student).Name;
+                tmp.StrCourse = sf.SearchCourseID(tmp.Course).Name;
+            }
+            return list;
+        }
+
+        public IList<Requirement> FillRequirement(IList<Requirement> list)
+        {
+            SqlFuns sf = new SqlFuns();
+            foreach (Requirement tmp in list)
+            {
+                tmp.StrCourse = sf.SearchRank(tmp.Course).Name;
             }
             return list;
         }
