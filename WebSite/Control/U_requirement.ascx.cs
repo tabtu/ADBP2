@@ -9,7 +9,24 @@ public partial class Control_U_requirement : System.Web.UI.UserControl
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (! IsPostBack)
+        {
+            SqlFuns sf = new SqlFuns();
+            bind(sf.SearchRank());
+        }
+    }
 
+    public void bind(IList<Rank> list)
+    {
+        PagedDataSource pds = new PagedDataSource();
+        if (list != null)
+        {
+            pds.DataSource = list;
+            DropDownList_req.DataSource = pds;
+            DropDownList_req.DataTextField = "Name";
+            DropDownList_req.DataValueField = "Id";
+            DropDownList_req.DataBind();
+        }
     }
 
     public void bind(IList<Requirement> list)

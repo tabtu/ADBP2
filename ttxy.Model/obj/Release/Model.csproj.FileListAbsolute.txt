@@ -3,3 +3,8 @@ C:\ttxy\workspace\net\PetsNote\ttxy.Model\bin\Release\ttxy.Model.pdb
 C:\ttxy\workspace\net\PetsNote\ttxy.Model\obj\Release\ttxy.Model.dll
 C:\ttxy\workspace\net\PetsNote\ttxy.Model\obj\Release\ttxy.Model.pdb
 C:\ttxy\workspace\net\PetsNote\ttxy.Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+C:\ttxy\workspace\net\ADB_P2\ttxy.Model\bin\Release\ttxy.Model.dll
+C:\ttxy\workspace\net\ADB_P2\ttxy.Model\bin\Release\ttxy.Model.pdb
+C:\ttxy\workspace\net\ADB_P2\ttxy.Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+C:\ttxy\workspace\net\ADB_P2\ttxy.Model\obj\Release\ttxy.Model.dll
+C:\ttxy\workspace\net\ADB_P2\ttxy.Model\obj\Release\ttxy.Model.pdb

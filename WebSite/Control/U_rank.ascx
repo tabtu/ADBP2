@@ -1,10 +1,16 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="U_rank.ascx.cs" Inherits="Control_U_rank" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
 
+                <style type="text/css">
+                    .auto-style1 {
+                        height: 23px;
+                    }
+                </style>
+
                 <table>
                     <tr>
-                        <td><strong>Date: </strong> </td>
-                        <td><asp:TextBox ID="TextBox_dt" runat="server"></asp:TextBox>
+                        <td class="auto-style1"><strong>Date: </strong> </td>
+                        <td class="auto-style1"><asp:TextBox ID="TextBox_dt" runat="server"></asp:TextBox>
                 <ajaxToolkit:CalendarExtender ID="TextBox_dt_CalendarExtender" runat="server" BehaviorID="TextBox1_CalendarExtender" TargetControlID="TextBox_dt" />
                 </td>
                     </tr>

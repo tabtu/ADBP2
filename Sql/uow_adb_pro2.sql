@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50712
 File Encoding         : 65001
 
-Date: 2017-04-09 00:08:46
+Date: 2017-04-09 16:24:46
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -76,7 +76,7 @@ CREATE TABLE `db_p2_course` (
   PRIMARY KEY (`COS_ID`),
   KEY `COCI` (`COL_ID`),
   CONSTRAINT `COCI` FOREIGN KEY (`COL_ID`) REFERENCES `db_p2_courselevel` (`COL_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of db_p2_course
@@ -91,6 +91,31 @@ INSERT INTO `db_p2_course` VALUES ('0000000007', 'Punching competition', '4', '
 INSERT INTO `db_p2_course` VALUES ('0000000008', 'Punching showing', '5', '');
 INSERT INTO `db_p2_course` VALUES ('0000000009', 'Training testing', '1', '');
 INSERT INTO `db_p2_course` VALUES ('0000000010', 'Yellow level test', '1', '');
+INSERT INTO `db_p2_course` VALUES ('0000000011', 'Drawing 1', '1', '');
+INSERT INTO `db_p2_course` VALUES ('0000000012', 'Color and painting 1', '1', '');
+INSERT INTO `db_p2_course` VALUES ('0000000013', 'Sculpture 1', '1', '');
+INSERT INTO `db_p2_course` VALUES ('0000000014', 'New Media 1', '1', '');
+INSERT INTO `db_p2_course` VALUES ('0000000015', 'Art History 1', '1', '');
+INSERT INTO `db_p2_course` VALUES ('0000000016', 'Drawing 2', '2', '');
+INSERT INTO `db_p2_course` VALUES ('0000000017', 'Color and painting 2', '2', '');
+INSERT INTO `db_p2_course` VALUES ('0000000018', 'Sculpture 2', '2', '');
+INSERT INTO `db_p2_course` VALUES ('0000000019', 'New Media 2', '2', '');
+INSERT INTO `db_p2_course` VALUES ('0000000020', 'Art History 2', '2', '');
+INSERT INTO `db_p2_course` VALUES ('0000000021', 'Drawing 3', '3', '');
+INSERT INTO `db_p2_course` VALUES ('0000000022', 'Color and painting 3', '3', '');
+INSERT INTO `db_p2_course` VALUES ('0000000023', 'Sculpture 3', '3', '');
+INSERT INTO `db_p2_course` VALUES ('0000000024', 'New Media 3', '3', '');
+INSERT INTO `db_p2_course` VALUES ('0000000025', 'Art History 3', '3', '');
+INSERT INTO `db_p2_course` VALUES ('0000000026', 'Drawing 4', '4', '');
+INSERT INTO `db_p2_course` VALUES ('0000000027', 'Color and painting 4', '4', '');
+INSERT INTO `db_p2_course` VALUES ('0000000028', 'Sculpture 4', '4', '');
+INSERT INTO `db_p2_course` VALUES ('0000000029', 'New Media 4', '4', '');
+INSERT INTO `db_p2_course` VALUES ('0000000030', 'Art History 4', '4', '');
+INSERT INTO `db_p2_course` VALUES ('0000000031', 'Drawing 5', '5', '');
+INSERT INTO `db_p2_course` VALUES ('0000000032', 'Color and painting 5', '5', '');
+INSERT INTO `db_p2_course` VALUES ('0000000033', 'Sculpture 5', '5', '');
+INSERT INTO `db_p2_course` VALUES ('0000000034', 'New Media 5', '5', '');
+INSERT INTO `db_p2_course` VALUES ('0000000035', 'Art History 5', '5', '');
 
 -- ----------------------------
 -- Table structure for `db_p2_courselevel`
@@ -140,7 +165,7 @@ CREATE TABLE `db_p2_parent` (
   `PAR_MOBILE` varchar(20) NOT NULL,
   `PAR_EMAIL` varchar(50) NOT NULL,
   PRIMARY KEY (`PAR_NUM`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of db_p2_parent
@@ -285,12 +310,104 @@ CREATE TABLE `db_p2_requirement` (
 -- ----------------------------
 -- Records of db_p2_requirement
 -- ----------------------------
+INSERT INTO `db_p2_requirement` VALUES ('1', '3', '');
+INSERT INTO `db_p2_requirement` VALUES ('1', '5', '');
+INSERT INTO `db_p2_requirement` VALUES ('1', '18', '');
+INSERT INTO `db_p2_requirement` VALUES ('1', '35', '');
 INSERT INTO `db_p2_requirement` VALUES ('2', '1', '');
 INSERT INTO `db_p2_requirement` VALUES ('2', '4', '');
 INSERT INTO `db_p2_requirement` VALUES ('2', '5', '');
 INSERT INTO `db_p2_requirement` VALUES ('2', '10', '');
+INSERT INTO `db_p2_requirement` VALUES ('2', '14', '');
+INSERT INTO `db_p2_requirement` VALUES ('2', '16', '');
 INSERT INTO `db_p2_requirement` VALUES ('3', '2', '');
 INSERT INTO `db_p2_requirement` VALUES ('3', '4', '');
+INSERT INTO `db_p2_requirement` VALUES ('3', '13', '');
+INSERT INTO `db_p2_requirement` VALUES ('3', '17', '');
+INSERT INTO `db_p2_requirement` VALUES ('3', '19', '');
+INSERT INTO `db_p2_requirement` VALUES ('3', '27', '');
+INSERT INTO `db_p2_requirement` VALUES ('4', '21', '');
+INSERT INTO `db_p2_requirement` VALUES ('4', '23', '');
+INSERT INTO `db_p2_requirement` VALUES ('4', '24', '');
+INSERT INTO `db_p2_requirement` VALUES ('4', '28', '');
+INSERT INTO `db_p2_requirement` VALUES ('4', '31', '');
+INSERT INTO `db_p2_requirement` VALUES ('5', '8', '');
+INSERT INTO `db_p2_requirement` VALUES ('5', '10', '');
+INSERT INTO `db_p2_requirement` VALUES ('5', '12', '');
+INSERT INTO `db_p2_requirement` VALUES ('5', '30', '');
+INSERT INTO `db_p2_requirement` VALUES ('5', '32', '');
+INSERT INTO `db_p2_requirement` VALUES ('6', '4', '');
+INSERT INTO `db_p2_requirement` VALUES ('6', '11', '');
+INSERT INTO `db_p2_requirement` VALUES ('6', '13', '');
+INSERT INTO `db_p2_requirement` VALUES ('7', '1', '');
+INSERT INTO `db_p2_requirement` VALUES ('7', '5', '');
+INSERT INTO `db_p2_requirement` VALUES ('7', '8', '');
+INSERT INTO `db_p2_requirement` VALUES ('7', '9', '');
+INSERT INTO `db_p2_requirement` VALUES ('7', '31', '');
+INSERT INTO `db_p2_requirement` VALUES ('7', '34', '');
+INSERT INTO `db_p2_requirement` VALUES ('8', '1', '');
+INSERT INTO `db_p2_requirement` VALUES ('8', '8', '');
+INSERT INTO `db_p2_requirement` VALUES ('8', '13', '');
+INSERT INTO `db_p2_requirement` VALUES ('8', '18', '');
+INSERT INTO `db_p2_requirement` VALUES ('8', '21', '');
+INSERT INTO `db_p2_requirement` VALUES ('8', '27', '');
+INSERT INTO `db_p2_requirement` VALUES ('8', '28', '');
+INSERT INTO `db_p2_requirement` VALUES ('9', '1', '');
+INSERT INTO `db_p2_requirement` VALUES ('9', '7', '');
+INSERT INTO `db_p2_requirement` VALUES ('9', '9', '');
+INSERT INTO `db_p2_requirement` VALUES ('9', '13', '');
+INSERT INTO `db_p2_requirement` VALUES ('9', '14', '');
+INSERT INTO `db_p2_requirement` VALUES ('9', '18', '');
+INSERT INTO `db_p2_requirement` VALUES ('9', '19', '');
+INSERT INTO `db_p2_requirement` VALUES ('9', '27', '');
+INSERT INTO `db_p2_requirement` VALUES ('10', '1', '');
+INSERT INTO `db_p2_requirement` VALUES ('10', '2', '');
+INSERT INTO `db_p2_requirement` VALUES ('10', '14', '');
+INSERT INTO `db_p2_requirement` VALUES ('10', '15', '');
+INSERT INTO `db_p2_requirement` VALUES ('10', '19', '');
+INSERT INTO `db_p2_requirement` VALUES ('10', '20', '');
+INSERT INTO `db_p2_requirement` VALUES ('10', '30', '');
+INSERT INTO `db_p2_requirement` VALUES ('11', '11', '');
+INSERT INTO `db_p2_requirement` VALUES ('11', '12', '');
+INSERT INTO `db_p2_requirement` VALUES ('11', '15', '');
+INSERT INTO `db_p2_requirement` VALUES ('11', '21', '');
+INSERT INTO `db_p2_requirement` VALUES ('11', '22', '');
+INSERT INTO `db_p2_requirement` VALUES ('11', '31', '');
+INSERT INTO `db_p2_requirement` VALUES ('11', '33', '');
+INSERT INTO `db_p2_requirement` VALUES ('12', '1', '');
+INSERT INTO `db_p2_requirement` VALUES ('12', '12', '');
+INSERT INTO `db_p2_requirement` VALUES ('12', '13', '');
+INSERT INTO `db_p2_requirement` VALUES ('12', '20', '');
+INSERT INTO `db_p2_requirement` VALUES ('12', '24', '');
+INSERT INTO `db_p2_requirement` VALUES ('13', '11', '');
+INSERT INTO `db_p2_requirement` VALUES ('13', '13', '');
+INSERT INTO `db_p2_requirement` VALUES ('13', '14', '');
+INSERT INTO `db_p2_requirement` VALUES ('13', '19', '');
+INSERT INTO `db_p2_requirement` VALUES ('13', '20', '');
+INSERT INTO `db_p2_requirement` VALUES ('13', '30', '');
+INSERT INTO `db_p2_requirement` VALUES ('14', '4', '');
+INSERT INTO `db_p2_requirement` VALUES ('14', '7', '');
+INSERT INTO `db_p2_requirement` VALUES ('14', '8', '');
+INSERT INTO `db_p2_requirement` VALUES ('14', '9', '');
+INSERT INTO `db_p2_requirement` VALUES ('14', '15', '');
+INSERT INTO `db_p2_requirement` VALUES ('14', '23', '');
+INSERT INTO `db_p2_requirement` VALUES ('14', '35', '');
+INSERT INTO `db_p2_requirement` VALUES ('15', '1', '');
+INSERT INTO `db_p2_requirement` VALUES ('15', '15', '');
+INSERT INTO `db_p2_requirement` VALUES ('15', '16', '');
+INSERT INTO `db_p2_requirement` VALUES ('15', '22', '');
+INSERT INTO `db_p2_requirement` VALUES ('15', '25', '');
+INSERT INTO `db_p2_requirement` VALUES ('15', '35', '');
+INSERT INTO `db_p2_requirement` VALUES ('16', '2', '');
+INSERT INTO `db_p2_requirement` VALUES ('16', '11', '');
+INSERT INTO `db_p2_requirement` VALUES ('16', '15', '');
+INSERT INTO `db_p2_requirement` VALUES ('16', '33', '');
+INSERT INTO `db_p2_requirement` VALUES ('17', '2', '');
+INSERT INTO `db_p2_requirement` VALUES ('17', '5', '');
+INSERT INTO `db_p2_requirement` VALUES ('17', '6', '');
+INSERT INTO `db_p2_requirement` VALUES ('17', '17', '');
+INSERT INTO `db_p2_requirement` VALUES ('17', '18', '');
+INSERT INTO `db_p2_requirement` VALUES ('17', '31', '');
 
 -- ----------------------------
 -- Table structure for `db_p2_student`
@@ -306,7 +423,7 @@ CREATE TABLE `db_p2_student` (
   `STU_ADDR` varchar(100) NOT NULL,
   `STU_ACTIVE` bit(1) NOT NULL,
   PRIMARY KEY (`STU_NUM`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of db_p2_student
@@ -362,6 +479,62 @@ INSERT INTO `db_p2_stupar` VALUES ('1', '', '', '1');
 INSERT INTO `db_p2_stupar` VALUES ('1', '', '', '1');
 INSERT INTO `db_p2_stupar` VALUES ('2', '', '', '3');
 INSERT INTO `db_p2_stupar` VALUES ('2', '', '', '1');
+INSERT INTO `db_p2_stupar` VALUES ('3', '', '', '4');
+INSERT INTO `db_p2_stupar` VALUES ('3', '', '', '4');
+INSERT INTO `db_p2_stupar` VALUES ('4', '', '', '2');
+INSERT INTO `db_p2_stupar` VALUES ('4', '', '', '3');
+INSERT INTO `db_p2_stupar` VALUES ('5', '', '', '3');
+INSERT INTO `db_p2_stupar` VALUES ('5', '', '', '9');
+INSERT INTO `db_p2_stupar` VALUES ('6', '', '', '3');
+INSERT INTO `db_p2_stupar` VALUES ('6', '', '', '3');
+INSERT INTO `db_p2_stupar` VALUES ('7', '', '', '10');
+INSERT INTO `db_p2_stupar` VALUES ('7', '', '', '18');
+INSERT INTO `db_p2_stupar` VALUES ('8', '', '', '7');
+INSERT INTO `db_p2_stupar` VALUES ('8', '', '', '8');
+INSERT INTO `db_p2_stupar` VALUES ('9', '', '', '9');
+INSERT INTO `db_p2_stupar` VALUES ('9', '', '', '8');
+INSERT INTO `db_p2_stupar` VALUES ('10', '', '', '8');
+INSERT INTO `db_p2_stupar` VALUES ('10', '', '', '2');
+INSERT INTO `db_p2_stupar` VALUES ('11', '', '', '8');
+INSERT INTO `db_p2_stupar` VALUES ('11', '', '', '8');
+INSERT INTO `db_p2_stupar` VALUES ('12', '', '', '3');
+INSERT INTO `db_p2_stupar` VALUES ('12', '', '', '22');
+INSERT INTO `db_p2_stupar` VALUES ('13', '', '', '3');
+INSERT INTO `db_p2_stupar` VALUES ('13', '', '', '9');
+INSERT INTO `db_p2_stupar` VALUES ('14', '', '', '6');
+INSERT INTO `db_p2_stupar` VALUES ('14', '', '', '4');
+INSERT INTO `db_p2_stupar` VALUES ('15', '', '', '4');
+INSERT INTO `db_p2_stupar` VALUES ('15', '', '', '9');
+INSERT INTO `db_p2_stupar` VALUES ('16', '', '', '5');
+INSERT INTO `db_p2_stupar` VALUES ('16', '', '', '9');
+INSERT INTO `db_p2_stupar` VALUES ('17', '', '', '5');
+INSERT INTO `db_p2_stupar` VALUES ('17', '', '', '23');
+INSERT INTO `db_p2_stupar` VALUES ('18', '', '', '6');
+INSERT INTO `db_p2_stupar` VALUES ('18', '', '', '9');
+INSERT INTO `db_p2_stupar` VALUES ('19', '', '', '6');
+INSERT INTO `db_p2_stupar` VALUES ('19', '', '', '4');
+INSERT INTO `db_p2_stupar` VALUES ('20', '', '', '9');
+INSERT INTO `db_p2_stupar` VALUES ('20', '', '', '7');
+INSERT INTO `db_p2_stupar` VALUES ('21', '', '', '8');
+INSERT INTO `db_p2_stupar` VALUES ('21', '', '', '22');
+INSERT INTO `db_p2_stupar` VALUES ('22', '', '', '7');
+INSERT INTO `db_p2_stupar` VALUES ('22', '', '', '7');
+INSERT INTO `db_p2_stupar` VALUES ('23', '', '', '2');
+INSERT INTO `db_p2_stupar` VALUES ('23', '', '', '0');
+INSERT INTO `db_p2_stupar` VALUES ('24', '', '', '1');
+INSERT INTO `db_p2_stupar` VALUES ('24', '', '', '24');
+INSERT INTO `db_p2_stupar` VALUES ('25', '', '', '3');
+INSERT INTO `db_p2_stupar` VALUES ('25', '', '', '0');
+INSERT INTO `db_p2_stupar` VALUES ('26', '', '', '9');
+INSERT INTO `db_p2_stupar` VALUES ('26', '', '', '24');
+INSERT INTO `db_p2_stupar` VALUES ('27', '', '', '8');
+INSERT INTO `db_p2_stupar` VALUES ('27', '', '', '5');
+INSERT INTO `db_p2_stupar` VALUES ('28', '', '', '8');
+INSERT INTO `db_p2_stupar` VALUES ('28', '', '', '11');
+INSERT INTO `db_p2_stupar` VALUES ('29', '', '', '6');
+INSERT INTO `db_p2_stupar` VALUES ('29', '', '', '1');
+INSERT INTO `db_p2_stupar` VALUES ('30', '', '', '3');
+INSERT INTO `db_p2_stupar` VALUES ('30', '', '', '11');
 
 -- ----------------------------
 -- Table structure for `db_p2_sturank`
@@ -432,6 +605,41 @@ CREATE TABLE `db_p2_timetable` (
 -- ----------------------------
 -- Records of db_p2_timetable
 -- ----------------------------
+INSERT INTO `db_p2_timetable` VALUES ('1', '2', '590', '650');
+INSERT INTO `db_p2_timetable` VALUES ('2', '1', '510', '570');
 INSERT INTO `db_p2_timetable` VALUES ('2', '1', '600', '660');
+INSERT INTO `db_p2_timetable` VALUES ('3', '1', '590', '650');
 INSERT INTO `db_p2_timetable` VALUES ('3', '1', '690', '720');
+INSERT INTO `db_p2_timetable` VALUES ('4', '2', '510', '570');
 INSERT INTO `db_p2_timetable` VALUES ('4', '2', '780', '840');
+INSERT INTO `db_p2_timetable` VALUES ('5', '4', '810', '870');
+INSERT INTO `db_p2_timetable` VALUES ('6', '2', '690', '750');
+INSERT INTO `db_p2_timetable` VALUES ('7', '3', '690', '750');
+INSERT INTO `db_p2_timetable` VALUES ('8', '2', '810', '870');
+INSERT INTO `db_p2_timetable` VALUES ('9', '3', '510', '570');
+INSERT INTO `db_p2_timetable` VALUES ('10', '3', '590', '650');
+INSERT INTO `db_p2_timetable` VALUES ('11', '1', '690', '750');
+INSERT INTO `db_p2_timetable` VALUES ('12', '1', '900', '960');
+INSERT INTO `db_p2_timetable` VALUES ('13', '4', '900', '960');
+INSERT INTO `db_p2_timetable` VALUES ('14', '5', '510', '570');
+INSERT INTO `db_p2_timetable` VALUES ('15', '1', '810', '870');
+INSERT INTO `db_p2_timetable` VALUES ('16', '5', '590', '650');
+INSERT INTO `db_p2_timetable` VALUES ('17', '5', '690', '750');
+INSERT INTO `db_p2_timetable` VALUES ('18', '5', '780', '840');
+INSERT INTO `db_p2_timetable` VALUES ('19', '2', '900', '960');
+INSERT INTO `db_p2_timetable` VALUES ('20', '5', '870', '930');
+INSERT INTO `db_p2_timetable` VALUES ('21', '6', '540', '600');
+INSERT INTO `db_p2_timetable` VALUES ('22', '6', '630', '690');
+INSERT INTO `db_p2_timetable` VALUES ('23', '6', '720', '780');
+INSERT INTO `db_p2_timetable` VALUES ('24', '6', '810', '870');
+INSERT INTO `db_p2_timetable` VALUES ('25', '6', '890', '950');
+INSERT INTO `db_p2_timetable` VALUES ('26', '7', '540', '600');
+INSERT INTO `db_p2_timetable` VALUES ('27', '7', '630', '690');
+INSERT INTO `db_p2_timetable` VALUES ('28', '7', '720', '780');
+INSERT INTO `db_p2_timetable` VALUES ('29', '7', '810', '870');
+INSERT INTO `db_p2_timetable` VALUES ('30', '7', '890', '950');
+INSERT INTO `db_p2_timetable` VALUES ('31', '4', '690', '750');
+INSERT INTO `db_p2_timetable` VALUES ('32', '4', '590', '650');
+INSERT INTO `db_p2_timetable` VALUES ('33', '4', '510', '570');
+INSERT INTO `db_p2_timetable` VALUES ('34', '3', '900', '960');
+INSERT INTO `db_p2_timetable` VALUES ('35', '3', '810', '870');

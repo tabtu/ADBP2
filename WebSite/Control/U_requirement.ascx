@@ -15,7 +15,7 @@
     </HeaderTemplate>
     <ItemTemplate>
         <tr>
-            <td><%#Eval("StrCourseName") %></td>
+            <td><%#Eval("StrCourse") %></td>
             <td><%#Eval("Description") %></td>
         </tr>
     </ItemTemplate>

@@ -97,7 +97,7 @@ namespace ttxy.Funcs
             SqlFuns sf = new SqlFuns();
             foreach (Requirement tmp in list)
             {
-                tmp.StrCourse = sf.SearchRank(tmp.Course).Name;
+                tmp.StrCourse = sf.SearchCourseID(tmp.Course).Name;
             }
             return list;
         }

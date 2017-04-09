@@ -48,12 +48,13 @@
             <ContentTemplate>
                 <uc1:U_Fee ID="U_Fee1" runat="server" />
                 <uc2:U_mytimetable ID="U_mytimetable1" runat="server" />
-            </ContentTemplate>
-        </asp:UpdatePanel>
+            
         <uc6:U_student ID="U_student1" runat="server" />
         <uc5:U_requirement ID="U_requirement1" runat="server" />
         <uc4:U_report_fee ID="U_report_fee1" runat="server" />
         <uc3:U_rank ID="U_rank1" runat="server" />
+                </ContentTemplate>
+        </asp:UpdatePanel>
         <br />
         
         <br />
